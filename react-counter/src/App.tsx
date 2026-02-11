@@ -4,6 +4,7 @@ import UseCard from "./components/component";
 import ToggleText from "./components/toggleText";
 import NoteList from "./components/listItems";
 import NoteListToDelete from "./components/noteListDelete";
+import ControlInput from "./components/controlInput";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ToggleText />
       <NoteList />
       <NoteListToDelete />
+      <ControlInput />
     </div>
   );
 }

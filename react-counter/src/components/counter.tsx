@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
+  const [value, setValue] = useState("");
 
   const reset = () => {
     if (count > 0) {
@@ -15,6 +16,9 @@ function Counter() {
     }
   };
 
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
   return (
     <div>
       <h2>Count: {count}</h2>
@@ -22,6 +26,8 @@ function Counter() {
       <button onClick={() => setCount((prev) => Math.max(0, prev * 2))}>*2</button>
       <button onClick={reset}>reset</button>
       <button onClick={consulme}>ділення</button>
+      <input type="number" value={value} onChange={handleChange} />
+      <button onClick={() => setCount((value) => Math.max(0, value * Number(value)))}>jj</button>
     </div>
   );
 }

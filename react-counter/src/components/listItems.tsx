@@ -13,4 +13,5 @@ function NoteList() {
     </ul>
   );
 }
+
 export default NoteList;
