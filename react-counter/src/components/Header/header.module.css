@@ -1,0 +1,70 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.headerLight {
+  background: purple;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0, 2px, 0, 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.headerDark {
+  background: orange;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0, 2px, 0, 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.headerLight button {
+  background: white;
+  color: purple;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.headerDark button {
+  background: black;
+  color: orange;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navigationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.navList a:hover {
+  color: orange;
+}

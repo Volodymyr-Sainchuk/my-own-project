@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 100%;
+  margin: auto;
+  padding: 0, 100px, 0, 0;
   text-align: center;
 }
 
@@ -39,4 +39,18 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.light {
+  background: white;
+  color: purple;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+.dark {
+  background: #121212;
+  color: orange;
+  min-height: 100vh;
+  min-width: 100vh;
 }
