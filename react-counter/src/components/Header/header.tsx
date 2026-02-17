@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./header.module.css";
+import { useState } from "react";
 
 type HeaderProps = {
   dark: boolean;
@@ -7,10 +8,17 @@ type HeaderProps = {
 };
 
 function Header({ dark, setDark }: HeaderProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className={dark ? styles.headerDark : styles.headerLight}>
-      <a href="./">My React App</a>
-      <ul className={styles.navigationHeader}>
+    <header className={`${styles.header} ${dark ? styles.headerDark : styles.headerLight}`}>
+      <a href="./" className={styles.logo}>
+        My React App
+      </a>
+      <div className={styles.burger} onClick={() => setMenuOpen((prev) => !prev)}>
+        =
+      </div>
+      <ul className={`${styles.navigationHeader} ${menuOpen ? styles.active : ""}`}>
         <li className={styles.navList}>
           <a href="/">Home</a>
         </li>

@@ -4,6 +4,32 @@ ul {
   margin: 0;
 }
 
+.header {
+  padding: 8px;
+  margin: auto;
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.burger {
+  display: flex;
+  cursor: pointer;
+  z-index: 1100;
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.active {
+  display: flex;
+}
 .headerLight {
   background: purple;
   color: white;
@@ -11,7 +37,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0, 2px, 0, 2px;
+  padding: 0 2px 0 2px;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,7 +54,9 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0, 2px, 0, 2px;
+  padding: 0 2px 0 2px;
+
+  /* margin-right: 10px; */
   position: fixed;
   top: 0;
   left: 0;
@@ -39,32 +67,99 @@ ul {
 }
 
 .headerLight button {
-  background: white;
-  color: purple;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px;
+  background: transparent;
+  color: black;
+  padding: 0 2px;
+
+  border: solid burlywood;
+  border-radius: 40px;
   cursor: pointer;
+  z-index: 1001;
+  margin-right: 10px;
 }
 
 .headerDark button {
-  background: black;
-  color: orange;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px;
+  background: transparent;
+  color: white;
+  padding: 0 2px;
+
+  border: solid darkcyan;
+  border-radius: 40px;
   cursor: pointer;
+  z-index: 1001;
+  margin-right: 10px;
 }
 
 .navigationHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-  margin-left: auto;
-  margin-right: 25px;
+  display: none;
 }
 
 .navList a:hover {
   color: orange;
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navigationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: 25px;
+  }
+
+  .headerDark button {
+    background: transparent;
+    color: saddlebrown;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .headerLight button {
+    background: transparent;
+    color: lawngreen;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .burger {
+    display: none;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .navigationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: 25px;
+  }
+
+  .headerDark button {
+    background: transparent;
+    color: greenyellow;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .headerLight button {
+    background: transparent;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .burger {
+    display: none;
+  }
 }
