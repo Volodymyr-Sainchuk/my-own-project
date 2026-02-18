@@ -9,6 +9,42 @@ ul {
   margin: auto;
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2000;
+}
+
+.modal {
+  width: 250px;
+  height: 100%;
+  background: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideIn 0.3s ease;
+}
+
+.modal a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+/* Slide animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .logo {
   text-decoration: none;
   color: inherit;
@@ -92,6 +128,11 @@ ul {
 
 .navigationHeader {
   display: none;
+}
+
+.navigationHaeder a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .navList a:hover {
